@@ -11,6 +11,7 @@ public class Chunk : MonoBehaviour
         SpawnFence();
     }
 
+    // Spawns between 0 - 2 fence obstacles every chunk
     void SpawnFence()
     {
         List<int> availableLanes = new List<int>() { 0, 1, 2, };
