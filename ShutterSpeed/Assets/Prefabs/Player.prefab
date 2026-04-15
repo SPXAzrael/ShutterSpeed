@@ -132,12 +132,13 @@ GameObject:
   m_Component:
   - component: {fileID: 5418667576339585179}
   - component: {fileID: 5978264479449349743}
+  - component: {fileID: 4233928858521706156}
   - component: {fileID: 8272113750212353122}
   - component: {fileID: 4461783698472238070}
   - component: {fileID: 5571184357419007075}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,6 +237,18 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &4233928858521706156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8675109343410633062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d79a0efa2bf5ce44843fe29abdd7d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollisionHandler
 --- !u!54 &8272113750212353122
 Rigidbody:
   m_ObjectHideFlags: 0
