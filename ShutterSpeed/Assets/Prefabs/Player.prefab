@@ -131,10 +131,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5418667576339585179}
-  - component: {fileID: 5978264479449349743}
-  - component: {fileID: 4233928858521706156}
-  - component: {fileID: 8272113750212353122}
   - component: {fileID: 4461783698472238070}
+  - component: {fileID: 4233928858521706156}
+  - component: {fileID: 5978264479449349743}
+  - component: {fileID: 8272113750212353122}
   - component: {fileID: 5571184357419007075}
   m_Layer: 0
   m_Name: Player
@@ -159,6 +159,36 @@ Transform:
   - {fileID: 3224183117875672998}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4461783698472238070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8675109343410633062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ca98ba4f7751f47be3a7443305021d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  jumpHeight: 5
+  laneClamp: 3
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  moveSpeed: 5
+--- !u!114 &4233928858521706156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8675109343410633062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d79a0efa2bf5ce44843fe29abdd7d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollisionHandler
 --- !u!114 &5978264479449349743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,18 +267,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &4233928858521706156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8675109343410633062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d79a0efa2bf5ce44843fe29abdd7d40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollisionHandler
 --- !u!54 &8272113750212353122
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -276,24 +294,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &4461783698472238070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8675109343410633062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7ca98ba4f7751f47be3a7443305021d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  jumpHeight: 5
-  laneClamp: 3
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  moveSpeed: 5
 --- !u!136 &5571184357419007075
 CapsuleCollider:
   m_ObjectHideFlags: 0
