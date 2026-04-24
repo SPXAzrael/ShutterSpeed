@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     Vector2 movement;
     bool IsSliding = false;
 
+    
+
     public void Move(InputAction.CallbackContext context)
     {
         movement = context.ReadValue<Vector2>();
