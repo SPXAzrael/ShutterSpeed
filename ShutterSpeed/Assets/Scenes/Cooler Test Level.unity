@@ -472,6 +472,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7470798675215113306, guid: a3ceb24b08ff1e54aacb59826d4add7a, type: 3}
   m_PrefabInstance: {fileID: 1706886197390247537}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &813281715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8201900009592757180, guid: c9b410ddd9cef1b42b8c27e08ded09c1, type: 3}
+  m_PrefabInstance: {fileID: 4851185972186866828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,103 +587,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0afb67b0e96f53648910aac119f42f76, type: 3}
---- !u!1 &1346193290
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1346193292}
-  - component: {fileID: 1346193291}
-  m_Layer: 0
-  m_Name: Magnet
-  m_TagString: Magnet
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1346193291
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346193290}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &1346193292
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346193290}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 7}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1817566202
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1817566204}
-  - component: {fileID: 1817566203}
-  m_Layer: 0
-  m_Name: GameRestart
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1817566203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817566202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae03dfc2993453c46aca15e0bb92d2ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RestartGame
---- !u!4 &1817566204
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817566202}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1155.1278, y: -510.34317, z: 1818.58}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2021783902 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5425179740815219963, guid: c9b410ddd9cef1b42b8c27e08ded09c1, type: 3}
@@ -698,10 +606,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4461783698472238070, guid: cb7bd8ffa0e04c04da973ed4426cd105, type: 3}
-      propertyPath: moveSpeed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5418667576339585179, guid: cb7bd8ffa0e04c04da973ed4426cd105, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1136,6 +1040,10 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 2021783902}
+    - target: {fileID: 9074733687745062279, guid: e2bf6e901e8728647972d60e1d64d18f, type: 3}
+      propertyPath: gameOverText
+      value: 
+      objectReference: {fileID: 813281715}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1157,5 +1065,3 @@ SceneRoots:
   - {fileID: 4851185972186866828}
   - {fileID: 168479382}
   - {fileID: 7355712215825002359}
-  - {fileID: 1346193292}
-  - {fileID: 1817566204}

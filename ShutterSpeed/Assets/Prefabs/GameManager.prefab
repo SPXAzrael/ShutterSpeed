@@ -45,3 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   scoreText: {fileID: 0}
+  MagnetCooldown: 10
+  gameOverText: {fileID: 0}
+  magnet: 0

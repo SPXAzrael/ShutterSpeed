@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ded26407446a5449f6239c076ab46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelGenerator
-  levelChunk: {fileID: 4265389904467233198, guid: 677dd3e8433f1f04a85ce3e271298359, type: 3}
+  levelChunks:
+  - {fileID: 9100717138146603859, guid: b535d8a11d7f1b343b74f5cf33148e7e, type: 3}
   chunkParent: {fileID: 0}
   startingChunks: 12
-  chunkLength: 10
+  chunkLength: 13
   moveSpeed: 8

@@ -111,7 +111,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
+  m_Radius: 0.6
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
@@ -187,10 +187,60 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4152780131211086403, guid: e1897547572cb784083cd89b4e298bc3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6909993844861238798}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1631188813513041960, guid: e1897547572cb784083cd89b4e298bc3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8005593761303947477}
+    - targetCorrespondingSourceObject: {fileID: 1631188813513041960, guid: e1897547572cb784083cd89b4e298bc3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 511016554165644464}
   m_SourcePrefab: {fileID: 100100000, guid: e1897547572cb784083cd89b4e298bc3, type: 3}
 --- !u!4 &474807350186596514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4152780131211086403, guid: e1897547572cb784083cd89b4e298bc3, type: 3}
   m_PrefabInstance: {fileID: 4555242872814621409}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2996121731883072201 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1631188813513041960, guid: e1897547572cb784083cd89b4e298bc3, type: 3}
+  m_PrefabInstance: {fileID: 4555242872814621409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &8005593761303947477
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2996121731883072201}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &511016554165644464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2996121731883072201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd67605f79e5b24aa39ca582ee118e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveCoin

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-    [SerializeField] GameObject levelChunk;
+    [SerializeField] GameObject[] levelChunks;
     [SerializeField] Transform chunkParent;
     [SerializeField] int startingChunks = 12;
     [SerializeField] float chunkLength = 10f; //1 unit = 1 metre
@@ -39,9 +39,9 @@ public class LevelGenerator : MonoBehaviour
         float spawnPositionZ = CalculateSpawnPositionZ();
 
         Vector3 chunkSpawnPosition = new Vector3(transform.position.x, transform.position.y, spawnPositionZ);
-
+        GameObject chunkToSpawn = levelChunks[Random.Range(0, levelChunks.Length)];
         //Puts the level object (prefab) and putting it into the level- chunkparent line puts them all under that
-        GameObject newChunk = Instantiate(levelChunk, chunkSpawnPosition, Quaternion.identity, chunkParent);
+        GameObject newChunk = Instantiate(chunkToSpawn, chunkSpawnPosition, chunkToSpawn.transform.rotation, chunkParent);
 
         //adds chunks to array
         chunks.Add(newChunk);
