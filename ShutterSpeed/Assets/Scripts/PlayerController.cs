@@ -97,4 +97,19 @@ public class PlayerController : MonoBehaviour
         IsSliding = false;
     }
 
+
+    //Stats
+    float playerStartPositionZ;
+    float distanceTravelled = 0;
+    public float DistanceTravelled => distanceTravelled;
+
+    void Start()
+    {
+        playerStartPositionZ = transform.position.z;
+    }
+
+    void Update()
+    {
+        distanceTravelled = transform.position.z - playerStartPositionZ;
+    }
 }
