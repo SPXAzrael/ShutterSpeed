@@ -4,6 +4,6 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync("Main Level");
+        SceneManager.LoadSceneAsync("Cooler Test Level");
     }
 }
