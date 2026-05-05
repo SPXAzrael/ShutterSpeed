@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
@@ -11,6 +12,9 @@ public class LevelGenerator : MonoBehaviour
 
     List<GameObject> chunks = new List<GameObject>();
 
+    float distanceTravelled;
+    public float DistanceTravelled => distanceTravelled;
+
     private void Start()
     {
         
@@ -21,7 +25,13 @@ public class LevelGenerator : MonoBehaviour
     private void Update()
     {
         MoveChunks();
+        CalculateDistanceTravelled();
+    }
 
+    void CalculateDistanceTravelled()
+    {
+        float deltaDistance = moveSpeed * Time.deltaTime;
+        distanceTravelled += deltaDistance;
     }
 
     private void SpawnStartingChunks()
@@ -82,4 +92,5 @@ public class LevelGenerator : MonoBehaviour
             }
         }
     }
+
 }
