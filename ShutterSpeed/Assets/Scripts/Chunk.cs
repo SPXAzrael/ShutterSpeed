@@ -4,33 +4,26 @@ using UnityEngine;
 public class Chunk : MonoBehaviour
 {
     [SerializeField] private GameObject fenceHazard;
-<<<<<<< Updated upstream
-=======
     [SerializeField] private GameObject[] powerup;
     [SerializeField] private GameObject coinPrefab;
-
-
->>>>>>> Stashed changes
+    [SerializeField] private float pickupSpawnChance = 0.3f;
+    [SerializeField] private float coinSpawnChance = 0.5f;
     [SerializeField] private float[] lanes = { -3f, 0f, 3f };
 
+    List<int> availableLanes = new List<int>() { 0, 1, 2, };
+    float coinSeperationValue = 2f;
     void Start()
     {
-<<<<<<< Updated upstream
         SpawnFence();
-=======
-        SpawnFences();
         SpawnPowerup();
         SpawnCoin();
-
->>>>>>> Stashed changes
     }
 
     // Spawns between 0 - 2 fence obstacles every chunk
     void SpawnFence()
     {
-        List<int> availableLanes = new List<int>() { 0, 1, 2, };
         int fencesToSpawn = Random.Range(0, lanes.Length);
-        for (int i = 0; i < fencesToSpawn; i++) 
+        for (int i = 0; i < fencesToSpawn; i++)
         {
             if (availableLanes.Count <= 0) break;
 
@@ -42,8 +35,6 @@ public class Chunk : MonoBehaviour
             Instantiate(fenceHazard, spawnPos, Quaternion.identity, this.transform);
         }
     }
-<<<<<<< Updated upstream
-=======
 
     void SpawnPowerup()
     {
@@ -56,11 +47,11 @@ public class Chunk : MonoBehaviour
         GameObject powerupToSpawn = powerup[Random.Range(0, powerup.Length)];
         Instantiate(powerupToSpawn, spawnPos, Quaternion.identity, this.transform);
 
-    }    
+    }
 
     void SpawnCoin()
     {
-        if (Random.value > pickupSpawnCoin || availableLanes.Count <= 0) return;
+        if (Random.value > coinSpawnChance || availableLanes.Count <= 0) return;
 
         int selectedLane = GetSelectedLane();
 
@@ -85,7 +76,4 @@ public class Chunk : MonoBehaviour
         availableLanes.RemoveAt(randomLane);
         return selectedLane;
     }
-
-
->>>>>>> Stashed changes
 }
