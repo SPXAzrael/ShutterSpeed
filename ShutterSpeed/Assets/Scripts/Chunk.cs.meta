@@ -1,15 +1,2 @@
 fileFormatVersion: 2
 guid: ca65c1ee1c015924790e72d32c894ef6
-MonoImporter:
-  externalObjects: {}
-  serializedVersion: 2
-  defaultReferences:
-  - fenceHazard: {instanceID: 0}
-  - magnetPrefab: {fileID: 5451117892722773189, guid: 51214d7c4a8ac684898fedd5cffc9bee, type: 3}
-  - coinPrefab: {instanceID: 0}
-  - doubleCoinsPrefab: {fileID: 5451117892722773189, guid: a96ab4725e2885d49943cc5597b21882, type: 3}
-  executionOrder: 0
-  icon: {instanceID: 0}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
