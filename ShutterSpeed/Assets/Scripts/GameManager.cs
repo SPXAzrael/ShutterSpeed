@@ -1,4 +1,4 @@
-using System;
+using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -6,15 +6,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] TMP_Text scoreText;
-    [SerializeField] TMP_Text distanceText;
     [SerializeField] float MagnetCooldown = 10f;
     [SerializeField] GameObject gameOverText;
-
-
     private float CooldownTimer = 0f;
 
     PlayerController player;
-    LevelGenerator levelGenerator;
 
     bool gameOver = false;
     public bool magnet = false;
@@ -22,6 +18,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     int score = 0;
+    int scoreMultiplier = 1;
 
     
 
@@ -40,21 +37,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         player = FindFirstObjectByType<PlayerController>();
-        levelGenerator = FindFirstObjectByType<LevelGenerator>();
-
-    }
-
-    private void FixedUpdate()
-    {
-        DistanceTravelled();
-    }
-
-    private void DistanceTravelled()
-    {
-        if (gameOver) return;
-
-        int distanceDisplay = Mathf.FloorToInt(levelGenerator.DistanceTravelled);
-        distanceText.text = distanceDisplay + " m";
     }
 
     private void Update()
@@ -68,6 +50,12 @@ public class GameManager : MonoBehaviour
                 CooldownTimer = 0f;
             }
         }    
+    }
+
+    public void ActivateDoubleCoins(float duration)
+    {
+        StartCoroutine(DoubleCoinsRoutine(duration));
+
     }
 
 
@@ -91,5 +79,12 @@ public class GameManager : MonoBehaviour
         player.enabled = false;
         gameOverText.SetActive(true);
         Time.timeScale = 0.1f;
+    }
+
+    IEnumerator DoubleCoinsRoutine(float duration)
+    {
+        scoreMultiplier = 2;
+        yield return new WaitForSeconds(duration);
+        scoreMultiplier = 1;
     }
 }
