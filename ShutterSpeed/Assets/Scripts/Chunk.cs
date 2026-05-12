@@ -45,10 +45,8 @@ public class Chunk : MonoBehaviour
         int selectedLane = GetSelectedLane();
 
         Vector3 spawnPos = new Vector3(lanes[selectedLane], transform.position.y, transform.position.z);
-
         GameObject powerupToSpawn = powerup[Random.Range(0, powerup.Length)];
         Instantiate(powerupToSpawn, spawnPos, Quaternion.identity, this.transform);
-
     }
 
     void SpawnCoin()

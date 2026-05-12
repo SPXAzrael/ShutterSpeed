@@ -1,6 +1,5 @@
 using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -19,8 +18,6 @@ public class GameManager : MonoBehaviour
 
     int score = 0;
     int scoreMultiplier = 1;
-
-    
 
     private void Awake()
     {
@@ -59,11 +56,18 @@ public class GameManager : MonoBehaviour
     }
 
 
+
+    public void ActivateDoubleCoins(float duration)
+    {
+        StartCoroutine(DoubleCoinsRoutine(duration));
+
+    }
+
     public void UpdateScore(int amount)
     {
         if (gameOver) return;
 
-        score += amount;
+        score += amount * scoreMultiplier;
         scoreText.text = score.ToString();
     }
 
