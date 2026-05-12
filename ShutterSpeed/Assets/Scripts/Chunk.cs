@@ -5,7 +5,7 @@ using UnityEngine;
 public class Chunk : MonoBehaviour
 {
     [SerializeField] private GameObject fenceHazard;
-    [SerializeField] private GameObject powerupPrefab;
+    [SerializeField] private GameObject[] powerup;
     [SerializeField] private GameObject coinPrefab;
 
     [SerializeField] private float[] lanes = { -3f, 0f, 3f };
@@ -43,7 +43,8 @@ public class Chunk : MonoBehaviour
         int selectedLane = GetSelectedLane();
 
         Vector3 spawnPos = new Vector3(lanes[selectedLane], transform.position.y, transform.position.z);
-        Instantiate(powerupPrefab, spawnPos, Quaternion.identity, this.transform);
+        GameObject powerupToSpawn = powerup[Random.Range(0, powerup.Length)];
+        Instantiate(powerupToSpawn, spawnPos, Quaternion.identity, this.transform);
     }
     void SpawnCoin()
     {

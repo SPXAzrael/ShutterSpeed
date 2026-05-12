@@ -1,6 +1,5 @@
-using System;
+using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -22,8 +21,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     int score = 0;
-
-    
+    int scoreMultiplier = 1;
 
     private void Awake()
     {
@@ -71,11 +69,18 @@ public class GameManager : MonoBehaviour
     }
 
 
+
+    public void ActivateDoubleCoins(float duration)
+    {
+        StartCoroutine(DoubleCoinsRoutine(duration));
+
+    }
+
     public void UpdateScore(int amount)
     {
         if (gameOver) return;
 
-        score += amount;
+        score += amount * scoreMultiplier;
         scoreText.text = score.ToString();
     }
 
@@ -91,5 +96,12 @@ public class GameManager : MonoBehaviour
         player.enabled = false;
         gameOverText.SetActive(true);
         Time.timeScale = 0.1f;
+    }
+
+    IEnumerator DoubleCoinsRoutine(float duration)
+    {
+        scoreMultiplier = 2;
+        yield return new WaitForSeconds(duration);
+        scoreMultiplier = 1;
     }
 }

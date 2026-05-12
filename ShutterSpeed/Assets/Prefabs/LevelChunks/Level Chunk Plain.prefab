@@ -82,7 +82,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chunk
   fenceHazard: {fileID: 5423890034509997051, guid: d40f331da4cb4e24ebc6639f282a92f5, type: 3}
-  powerupPrefab: {fileID: 5451117892722773189, guid: 51214d7c4a8ac684898fedd5cffc9bee, type: 3}
+  powerup:
+  - {fileID: 5451117892722773189, guid: a96ab4725e2885d49943cc5597b21882, type: 3}
+  - {fileID: 5451117892722773189, guid: 51214d7c4a8ac684898fedd5cffc9bee, type: 3}
   coinPrefab: {fileID: 2996121731883072201, guid: cea9033ecc98d51498cf8db0b084aff4, type: 3}
   lanes:
   - -3

@@ -587,6 +587,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0afb67b0e96f53648910aac119f42f76, type: 3}
+--- !u!114 &1905161178 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2837219988499785867, guid: c9b410ddd9cef1b42b8c27e08ded09c1, type: 3}
+  m_PrefabInstance: {fileID: 4851185972186866828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!114 &2021783902 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5425179740815219963, guid: c9b410ddd9cef1b42b8c27e08ded09c1, type: 3}
@@ -1040,6 +1051,10 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 2021783902}
+    - target: {fileID: 9074733687745062279, guid: e2bf6e901e8728647972d60e1d64d18f, type: 3}
+      propertyPath: distanceText
+      value: 
+      objectReference: {fileID: 1905161178}
     - target: {fileID: 9074733687745062279, guid: e2bf6e901e8728647972d60e1d64d18f, type: 3}
       propertyPath: gameOverText
       value: 
