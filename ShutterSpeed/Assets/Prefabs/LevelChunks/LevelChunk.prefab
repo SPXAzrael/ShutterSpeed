@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 4265389904467233198}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.10657, y: 0.93653, z: 1.19319}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -78,14 +78,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chunk
   fenceHazard: {fileID: 5423890034509997051, guid: d40f331da4cb4e24ebc6639f282a92f5, type: 3}
-  powerupPrefab: {fileID: 5451117892722773189, guid: 51214d7c4a8ac684898fedd5cffc9bee, type: 3}
+<<<<<<< Updated upstream:ShutterSpeed/Assets/Prefabs/LevelChunk.prefab
+=======
+  powerup:
+  - {fileID: 5451117892722773189, guid: 51214d7c4a8ac684898fedd5cffc9bee, type: 3}
+  - {fileID: 5451117892722773189, guid: a96ab4725e2885d49943cc5597b21882, type: 3}
+  magnetPrefab: {fileID: 0}
   coinPrefab: {fileID: 2996121731883072201, guid: cea9033ecc98d51498cf8db0b084aff4, type: 3}
+  doubleCoinsPrefab: {fileID: 0}
+>>>>>>> Stashed changes:ShutterSpeed/Assets/Prefabs/LevelChunks/LevelChunk.prefab
   lanes:
   - -3
   - 0
   - 3
+<<<<<<< Updated upstream:ShutterSpeed/Assets/Prefabs/LevelChunk.prefab
+=======
   pickupSpawnChance: 0.3
   pickupSpawnCoin: 0.5
+  coinSeperationValue: 2
+>>>>>>> Stashed changes:ShutterSpeed/Assets/Prefabs/LevelChunks/LevelChunk.prefab
 --- !u!1 &5787709436872073779
 GameObject:
   m_ObjectHideFlags: 0

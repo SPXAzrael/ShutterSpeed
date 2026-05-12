@@ -5,15 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] TMP_Text scoreText;
-    [SerializeField] TMP_Text distanceText;
     [SerializeField] float MagnetCooldown = 10f;
     [SerializeField] GameObject gameOverText;
-
-
     private float CooldownTimer = 0f;
 
     PlayerController player;
-    LevelGenerator levelGenerator;
 
     bool gameOver = false;
     public bool magnet = false;
@@ -38,21 +34,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         player = FindFirstObjectByType<PlayerController>();
-        levelGenerator = FindFirstObjectByType<LevelGenerator>();
-
-    }
-
-    private void FixedUpdate()
-    {
-        DistanceTravelled();
-    }
-
-    private void DistanceTravelled()
-    {
-        if (gameOver) return;
-
-        int distanceDisplay = Mathf.FloorToInt(levelGenerator.DistanceTravelled);
-        distanceText.text = distanceDisplay + " m";
     }
 
     private void Update()
@@ -66,6 +47,12 @@ public class GameManager : MonoBehaviour
                 CooldownTimer = 0f;
             }
         }    
+    }
+
+    public void ActivateDoubleCoins(float duration)
+    {
+        StartCoroutine(DoubleCoinsRoutine(duration));
+
     }
 
 
