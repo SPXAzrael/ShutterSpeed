@@ -7,15 +7,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpHeight;
     [SerializeField] private float laneClamp = 3f;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] AnimationClip Rollclip;
 
     CapsuleCollider collider;
+    Animator animator;
 
     private Rigidbody rb;
     public float moveSpeed = 5f;
     Vector2 movement;
     bool IsSliding = false;
 
-    
+    const string Jumpanim = "Jump";
+    const string Rollanim = "Roll";
 
     public void Move(InputAction.CallbackContext context)
     {
@@ -31,6 +34,7 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = playerVelocity;
 
             rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+            animator.SetTrigger(Jumpanim);
         }
     }
 
@@ -39,6 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         collider = GetComponent<CapsuleCollider>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void FixedUpdate()
@@ -56,6 +61,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
+        
         Vector3 currentPosition = transform.position;
         Vector3 moveDirection = new Vector3(movement.x, 0f, 0f);
         Vector3 newPosition = currentPosition + moveDirection * (moveSpeed * Time.fixedDeltaTime); 
@@ -89,8 +95,8 @@ public class PlayerController : MonoBehaviour
         collider.height /= 3;
         newColliderCentre.y -= collider.height / 2;
         collider.center = newColliderCentre;
-
-        yield return new WaitForSeconds(1f);
+        animator.SetTrigger(Rollanim);
+        yield return new WaitForSeconds(Rollclip.length);
 
         collider.height *= 3;
         collider.center = originalColliderCentre;

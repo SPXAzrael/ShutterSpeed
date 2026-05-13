@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour
     {
         gameOver = true;
         player.enabled = false;
+        levelGenerator.enabled = false;
         gameOverText.SetActive(true);
         Time.timeScale = 0.1f;
     }
