@@ -9,9 +9,14 @@ public class PlayerCollisionHandler : MonoBehaviour
     int hitCount;
     float lastHitTime = -Mathf.Infinity;
 
+    Animator animator;
+
+    const string Deathanim = "Death";
+
     private void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
+        animator = GetComponentInChildren<Animator>();
     }
     private void OnCollisionEnter(Collision other)
     {
@@ -42,6 +47,7 @@ public class PlayerCollisionHandler : MonoBehaviour
         if (hitCount >= 2)
         {
             gameManager.GameOver();
+            animator.SetTrigger(Deathanim);
         }
     }
 }
