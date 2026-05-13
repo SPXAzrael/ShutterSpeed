@@ -22,7 +22,7 @@ public class MoveCoin : MonoBehaviour
         if (flyToPlayer)
         {
             playerDirection = -(transform.position - player.transform.position);
-            rb.linearVelocity = (Time.time / timeStamp) * 10f * new Vector2(playerDirection.x, 0f);
+            rb.linearVelocity = (Time.time / timeStamp) * 10f * new Vector2(playerDirection.x, playerDirection.y);
         }
     }
 
